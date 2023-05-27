@@ -41,6 +41,7 @@ body {
     border-radius: 999px;
     background-color: #ED6A4E;
     text-decoration: none;
+    text-transform: uppercase;
     font-weight: bolder;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
 }
@@ -54,6 +55,7 @@ body {
     backdrop-filter: blur(0.5rem);
     background-color: transparent;
     border: 0.125rem solid #FFFFFF;
+    text-transform: none;
 }
 .button--transperent:hover {
     background-color: rgba(255, 255, 255, 0.2);
@@ -199,4 +201,82 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+}
+@media (max-width: 36rem) {
+    .cards {
+        background: none;
+        background-color: #E1DCCE;
+    }
+}
+
+.card_heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    text-transform: uppercase;
+}
+ 
+/* .cards_paragraph {
+
+} */
+
+.cards_headline {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
+}
+
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 2.5rem;
+}
+
+.card_details {
+    height: 25rem;
+    width: 18rem;
+    background-position: 50% 0%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+.card_details:nth-child(1) {
+    background-image: url(/images/adventures/krabi-thailand.jpg);
+}
+.card_details:nth-child(2) {
+    background-image: url(/images/adventures/surfcamp-bali.jpg);
+}
+.card_details:nth-child(3) {
+    background-image: url(/images/adventures/samui-thailand.jpg);
+}
+
+.details_container {
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 1.75rem
+}
+
+.card_details-headline {
+    text-transform: uppercase;
+}
+
+.card_details-paragraph {
+    text-transform: uppercase;
+}
+
+.card_details-paragraph--span {
+    color: #ED6A4E;
 }
