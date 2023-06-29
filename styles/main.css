@@ -61,6 +61,7 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* --- Header --- */
 .header {
     background-image: url(/images/header/header-background-0.5x.jpg);
     background-repeat: no-repeat;
@@ -196,6 +197,26 @@ body {
     }
 }
 
+.heading {
+    color: #014153;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 2rem 0;
+}
+
+.heading--centered {
+    text-align: center;
+}
+
+.heading_pre-text {
+    display: block;
+    font-size: 1.5rem;
+}
+
+/* --- CARDS --- */
 .cards {
     background-image: url(/images/adventures/background.jpg);
     background-repeat: no-repeat;
@@ -209,16 +230,12 @@ body {
     }
 }
 
-.card_heading {
+/* .card_heading {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
     text-transform: uppercase;
-}
- 
-/* .cards_paragraph {
-
 } */
 
 .cards_headline {
@@ -248,6 +265,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin: 1rem 4rem;
+    transition: all .2s ease-in-out
 }
 .card_details:nth-child(1) {
     background-image: url(/images/adventures/krabi-thailand.jpg);
@@ -257,6 +275,9 @@ body {
 }
 .card_details:nth-child(3) {
     background-image: url(/images/adventures/samui-thailand.jpg);
+}
+.card_details:hover {
+    transform: scale(1.1);
 }
 
 .details_container {
@@ -279,4 +300,22 @@ body {
 
 .card_details-paragraph--span {
     color: #ED6A4E;
+}
+
+/* --- STORY --- */
+.story {
+    background-image: url(../images/story/background-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.story-content > h2 {
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+.story-content > h2 > span {
+
 }
