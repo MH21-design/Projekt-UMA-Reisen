@@ -209,6 +209,7 @@ body {
 
 .heading--white {
     color: #FFFFFF;
+    text-shadow: 0 0 0.5 rgba(0, 0, 0, 0.5);
 }
 
 .heading--centered {
@@ -218,8 +219,8 @@ body {
 .heading--top-box::before {
     content: "";
     display: block;
-    height: 0.125rem;
-    width: 6rem;
+    height: 0.25rem;
+    width: 9rem;
     background-color: #ED6A4E;
     margin-bottom: 3rem;
 }
@@ -317,7 +318,7 @@ body {
 
 /* --- STORY --- */
 .story {
-    background-image: url(../images/story/background-mobile.jpg);
+    background-image: url("../images/story/background-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -326,16 +327,28 @@ body {
 }
 @media (min-width: 62em) {
     .story {
-        background-image: url(../images/story/background-desktop.jpg);
+        background-image: 
+            linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 10%, transparent 90%, rgba(0, 0, 0, 0.5) 100%),
+            url("../images/story/background-desktop.jpg");
+
+        background-size: 100% 100%, 110% auto;
+        background-position: 100% 50%;
+        background-attachment: local, fixed;
     }
 
     .story_container-content {
-        padding-left: calc(50% + 2rem);
+        padding-left: 50%;
     }
 }
 
 .story_paragraph {
+    font-size: 1rem;
     color: #FFFFFF;
     line-height: 1.5em;
-    margin-bottom: 2em;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.story_paragraph:nth-child(3) {
+    padding-bottom: 2rem;
 }
