@@ -207,8 +207,21 @@ body {
     padding: 2rem 0;
 }
 
+.heading--white {
+    color: #FFFFFF;
+}
+
 .heading--centered {
     text-align: center;
+}
+
+.heading--top-box::before {
+    content: "";
+    display: block;
+    height: 0.125rem;
+    width: 6rem;
+    background-color: #ED6A4E;
+    margin-bottom: 3rem;
 }
 
 .heading_pre-text {
@@ -304,18 +317,25 @@ body {
 
 /* --- STORY --- */
 .story {
-    background-image: url(../images/story/background-desktop.jpg);
+    background-image: url(../images/story/background-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+}
+@media (min-width: 62em) {
+    .story {
+        background-image: url(../images/story/background-desktop.jpg);
+    }
+
+    .story_container-content {
+        padding-left: calc(50% + 2rem);
+    }
 }
 
-.story-content > h2 {
-    text-transform: uppercase;
+.story_paragraph {
     color: #FFFFFF;
-
-}
-
-.story-content > h2 > span {
-
+    line-height: 1.5em;
+    margin-bottom: 2em;
 }
