@@ -205,6 +205,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding: 2rem 0;
+    line-height: 1em;
 }
 
 .heading--white {
@@ -225,12 +226,23 @@ body {
     margin-bottom: 3rem;
 }
 
+.heading--bottom-box::after {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    width: 9rem;
+    background-color: #ED6A4E;
+    margin-top: 3rem;
+}
+
 .heading_pre-text {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: lighter;
 }
 
 /* --- CARDS --- */
+
 .cards {
     background-image: url(/images/adventures/background.jpg);
     background-repeat: no-repeat;
@@ -317,6 +329,7 @@ body {
 }
 
 /* --- STORY --- */
+
 .story {
     background-image: url("../images/story/background-mobile.jpg");
     background-size: cover;
@@ -348,21 +361,27 @@ body {
     margin-bottom: 1.5rem;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
-
 .story_paragraph:nth-child(3) {
     padding-bottom: 2rem;
 }
+
+/* --- PARTS --- */
 
 .parts_paragraph {
     font-size: 1rem;
     color: #014153;
     line-height: 1.5em;
-    max-width: 40rem;
+    max-width: 60rem;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5rem;
+}
+@media (max-width: 1021px) {
+    .parts_paragraph {
+        margin-top: 4em;
+    }
 }
 
 .parts::after {
@@ -374,23 +393,43 @@ body {
     margin: 4rem auto 3rem auto;
 }
 
+.parts_items-outside {
+    overflow: hidden;
+}
+
 .parts_items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 3rem;
-    border: 0.125rem solid #ED6A4E;
+    margin-left: -4px;
+    margin-right: -4px;
+    border: 1px solid #ED6A4E;;
+}
+@media (max-width: 1021px) {
+    .parts_items {
+        margin-bottom: -3px;
+    }
 }
 
 .parts_item {
+    display: block;
     flex: 1 0 20rem;
-    border: 0.125rem solid #ED6A4E;
+    border: 1px solid #ED6A4E;
     padding: 1.5rem
 }
+.parts_item:hover {
+    background-color: rgba(222, 222, 222, 1);
+    cursor: pointer;
+}
+.parts_items a {
+    text-decoration: none;
+}
+
 
 .parts_item-icon-container {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 99999px;
     background-color: #ED6A4E;
     margin-left: auto;
@@ -401,9 +440,8 @@ body {
 }
 
 .parts_item-icon-container svg {
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
+    width: 3rem;
+    height: 3rem;
 }
 
 .parts_item-heading {
@@ -411,4 +449,77 @@ body {
     text-align: center;
     color: #014153;
     padding-top: 1.5rem;
+}
+
+/* --- GUIDE --- */
+
+.guide {
+    padding-top: 10rem;
+    background-image: 
+    linear-gradient(90deg, rgba(36, 161, 163, 0.25), rgba(36, 161, 163, 0.25)),
+    url(../images/guide/pexels-arnie-chou-927414-edited.jpg),
+    linear-gradient(90deg, #014153, #014153),
+    url(../images/guide/pexels-minmin-kp-2554603.jpg);
+    background-size: 
+        100% calc(100% - 10rem),
+        100% calc(100% - 10rem),
+        100% calc(100% - 10rem),
+        100% auto;
+    background-position: 
+        50% 100%,
+        50% 100%,
+        50% 100%,
+        50% -75vw;
+    background-repeat: 
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat;
+    background-blend-mode: 
+        normal, 
+        saturation, 
+        normal;
+}
+@media (min-width: 62em) {
+    .guide {
+        padding-top: 0;
+        background-size: 
+            60% 100%,
+            60% auto, 
+            60% 100%,
+            40% auto;
+        background-position: 
+            100% 50%,
+            100% 50%,
+            100% 50%,
+            0% 50%;
+    }
+}
+
+.guide_content {
+    padding: 4rem 2rem;
+}
+@media (min-width: 62em) {
+    .guide_content {
+        padding-left: 40%;
+    }
+}
+
+@media (max-width: 62em) {
+    .guide_content a {
+        max-width: 15rem;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 4rem;
+    }   
+}
+
+.guide_paragraph {
+    font-size: 1rem;
+    color: #FFFFFF;
+    line-height: 1.5em;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
