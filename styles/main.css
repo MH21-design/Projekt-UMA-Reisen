@@ -484,10 +484,10 @@ body {
     .guide {
         padding-top: 0;
         background-size: 
-            60% 100%,
-            60% auto, 
-            60% 100%,
-            40% auto;
+            calc(50% + 10rem) 100%,
+            calc(50% + 10rem) 100%, 
+            calc(50% + 10rem) 100%,
+            calc(50% - 10rem) auto;
         background-position: 
             100% 50%,
             100% 50%,
@@ -501,7 +501,7 @@ body {
 }
 @media (min-width: 62em) {
     .guide_content {
-        padding-left: 40%;
+        padding-left: calc(50% - 8rem);
     }
 }
 
@@ -522,4 +522,22 @@ body {
     margin-top: 1.25rem;
     margin-bottom: 1.5rem;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* --- FOOTER --- */
+
+.footer {
+    background-color: #ED6A4E;  
+    padding: 2rem; 
+}
+
+.footer_paragraph {
+    text-align: center;
+    color: #014153;
+}
+
+.footer_paragraph a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #014153;
 }
